@@ -1,0 +1,16 @@
+# Folder view configuration files
+.DS_Store
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Ignore files related to API keys
+.env
+*.env
+
+# npm Dependency directory
+node_modules
+
+# Compiled Python files
+*.pyc
