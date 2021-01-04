@@ -1,0 +1,20 @@
+[core]
+	excludesFile = ~/.gitignore_global
+[alias]
+	a = add
+	p = push
+	f = fetch
+	m = merge
+	b = branch
+	c = commit -m
+	ac = commit -am
+	st = status
+	lg = log
+	df = diff
+	co = checkout
+	po = push origin
+	mom = merge origin/master
+	# Local/private config goes in the include
+[include]
+	path = ~/.gitconfig_local
+
