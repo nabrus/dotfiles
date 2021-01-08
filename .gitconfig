@@ -14,7 +14,7 @@
 	co = checkout
 	po = push origin
 	mom = merge origin/master
-	# Local/private config goes in the include
+## Local/private config goes in the include ##
 [include]
 	path = ~/.gitconfig_local
 
