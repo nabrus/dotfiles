@@ -1,1 +1,3 @@
-## This repo contains my (.) files—configurations, shortcuts, etc.
+# dotfiles
+
+This repo contains my (`.`) files—configurations, shortcuts, etc.
