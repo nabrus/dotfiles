@@ -12,8 +12,10 @@
 	co = checkout
 	po = push origin
 	mom = merge origin/master
+
 [core]
-	excludesFile = ~/.gitignore_global	
+	excludesFile = ~/.gitignore_global
+
 ## Local/private config goes in the include ##
 [include]
 	path = ~/.gitconfig_local
