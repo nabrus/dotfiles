@@ -13,7 +13,7 @@ setopt correct
 
 ## SOURCE ##
 
-source $HOME/.zsh_aliases # Executes file
+source $HOME/.zsh/* # Executes all files in .zsh dir
 
 
 ## SHELL VARIABLES/PARAMETERS ##
