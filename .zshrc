@@ -20,5 +20,5 @@ source $HOME/.zsh/aliases
 
 # Save command history
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
-HISTSIZE=2000
+HISTSIZE=5000
 SAVEHIST=5000
