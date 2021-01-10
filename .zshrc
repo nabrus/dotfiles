@@ -2,18 +2,18 @@
 
 ## SHELL OPTIONS ##
 
-setopt autocd
 # Changes directory when path entered without cd
+setopt autocd
 
-setopt correct
-# Spell checker, `correct 'x' to 'y' [nyae]`
+# Spell checker
+# Usage: `correct 'x' to 'y' [nyae]`
 # n=no; y=yes; a=abort; e=edit
+setopt correct
 
 
 ## SOURCE ##
 
-source $HOME/.zsh/aliases
-# Executes file
+source $HOME/.zsh/aliases # Executes file
 
 
 ## SHELL VARIABLES/PARAMETERS ##
