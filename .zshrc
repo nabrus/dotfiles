@@ -18,7 +18,7 @@ setopt SHARE_HISTORY # Share history across multiple zsh sessions
 setopt HIST_IGNORE_ALL_DUPS # Removes older command in history list when command being added is a duplicate
 setopt HIST_REDUCE_BLANKS # Removes blank lines from history
 setopt HIST_FIND_NO_DUPS # Ignore dups when searching
-setopt HIST_VERIFY # `!!` Shows history expanded command before executing
+setopt HIST_VERIFY # `!!` Shows history expansion before executing
 
 
 ## SOURCE ##
