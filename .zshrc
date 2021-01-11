@@ -24,7 +24,8 @@ setopt HIST_VERIFY # `!!` Shows history expanded command before executing
 
 ## SOURCE ##
 
-for file in $HOME/.zsh/*; source $file # Executes all files in .zsh dir using a short form `for` loop
+# Load all files in .zsh dir to current shell using a short form `for` loop
+for file in $HOME/.zsh/*; source $file 
 
 
 ## SHELL VARIABLES/PARAMETERS ##
