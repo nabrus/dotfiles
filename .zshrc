@@ -2,10 +2,10 @@
 
 ## SHELL OPTIONS ##
 
-setopt AUTO_CD # Change dir when path entered without cd
+setopt AUTO_CD # Change dir when path entered without cd command
 
 setopt CORRECT # Spell checker
-# Usage: `correct 'x' to 'y' [nyae]`
+# Usage: `correct 'x' to 'y' [nyae]?`
 # n=no, execute as is; y=yes, correct and execute;
 # a=abort; e=edit, returns to the prompt
 
@@ -14,12 +14,12 @@ setopt NO_CASE_GLOB # Set globbing and tab-completion to be case-insensitive
 # characters.
 
 # History #
-setopt EXTENDED_HISTORY # Add timestamps to history
+setopt EXTENDED_HISTORY # Add timestamps to history `: <beginning time>:<elapsed seconds>;<command>`
 setopt SHARE_HISTORY # Share history across multiple zsh sessions
-setopt HIST_IGNORE_DUPS # Do not store duplications
+setopt HIST_IGNORE_ALL_DUPS # Removes older command in history list when command being added is a duplicate
 setopt HIST_REDUCE_BLANKS # Removes blank lines from history
 setopt HIST_FIND_NO_DUPS # Ignore dups when searching
-setopt HIST_VERIFY # `!!` Shows substituted command before executing
+setopt HIST_VERIFY # `!!` Shows history expanded command before executing
 
 ## SOURCE ##
 
