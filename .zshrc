@@ -24,7 +24,7 @@ setopt HIST_VERIFY # `!!` Shows history expanded command before executing
 
 ## SOURCE ##
 
-source $HOME/.zsh/* # Executes all files in .zsh dir
+for file in $HOME/.zsh/*; source $file # Executes all files in .zsh dir using a short form `for` loop
 
 
 ## SHELL VARIABLES/PARAMETERS ##
@@ -33,3 +33,4 @@ source $HOME/.zsh/* # Executes all files in .zsh dir
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000 # Lines remembered per session
 SAVEHIST=10000 # Lines stored in history file
+
