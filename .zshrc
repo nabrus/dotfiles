@@ -21,6 +21,7 @@ setopt HIST_REDUCE_BLANKS # Removes blank lines from history
 setopt HIST_FIND_NO_DUPS # Ignore dups when searching
 setopt HIST_VERIFY # `!!` Shows history expanded command before executing
 
+
 ## SOURCE ##
 
 source $HOME/.zsh/* # Executes all files in .zsh dir
