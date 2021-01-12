@@ -19,6 +19,7 @@ setopt HIST_IGNORE_ALL_DUPS # Removes older command in history list when command
 setopt HIST_REDUCE_BLANKS # Removes blank lines from history
 setopt HIST_FIND_NO_DUPS # Ignore dups when searching
 setopt HIST_VERIFY # `!!` Shows history expansion before executing
+# setopt HIST_SAVE_NO_DUPS # look up then un comment
 
 
 ## SOURCE ##
