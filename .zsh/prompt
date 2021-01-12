@@ -1,0 +1,2 @@
+## CORRECTION PROMPT ##
+SPROMPT="Correct %F{red}%R%f to %F{green}%r%f [nyae]?"
