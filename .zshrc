@@ -9,6 +9,8 @@ setopt CORRECT # Spell checker
 # n=no, execute as is; y=yes, correct and execute;
 # a=abort; e=edit, returns to the prompt
 
+setopt CORRECT_ALL # Correct spelling on all arguments.
+
 setopt NO_CASE_GLOB # Set globbing and tab-completion to be case-insensitive
 # Note: Globbing refers to the expansion of wildcard characters.
 
