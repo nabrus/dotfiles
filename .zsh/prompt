@@ -1,6 +1,9 @@
 ## PROMPT ##
-PROMPT='%B%F{179}%2~%f%b %B%F{98}%#%f%b '
+PROMPT='%B%F{179}%2~%f%b %B%F{75}%#%f%b '
+
+## RIGHT SIDE PROMPT ##
+# RPROMPT='%*'
 
 ## CORRECTION PROMPT ##
-SPROMPT='Correct %F{red}%R%f to %F{green}%r%f ?
--> [n=no; y=yes; a=abort; e=edit] '
+SPROMPT='-> Correct %B%F{196}%R%f%b to %B%F{green}%r%f%b ?
+[n=no; y=yes; a=abort; e=edit] '
