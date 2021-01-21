@@ -1,5 +1,9 @@
-## PROMPT ##
-PROMPT='%B%F{179}%2~%f%b %B%F{75}%#%f%b '
+## PROMPT ## 
+# orange 179
+# purple 98, 61
+# blue 33, 27
+PROMPT='%B%K{98}%F{231}%~%f%k%b
+%B%F{40}->%f%b %B%F{164}%#%f%b '
 
 ## RIGHT SIDE PROMPT ##
 # RPROMPT='%*'
