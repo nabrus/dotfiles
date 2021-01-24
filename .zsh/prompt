@@ -2,11 +2,17 @@
 # orange 179
 # purple 98, 61
 # blue 33, 27
-PROMPT='%B%K{98}%F{231}%~%f%k%b
-%B%F{40}->%f%b %B%F{164}%#%f%b '
+PROMPT='%B%K{98}%F{231} %~ %f%k%b
+%B%F{164}%#%f%b%B%F{40}->%f%b '
 
 ## RIGHT SIDE PROMPT ##
-# RPROMPT='%*'
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
+zstyle ':vcs_info:*' enable git 
 
 ## CORRECTION PROMPT ##
 SPROMPT='-> Correct %B%F{196}%R%f%b to %B%F{green}%r%f%b ?
