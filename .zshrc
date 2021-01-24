@@ -37,3 +37,8 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000 # Lines remembered per session
 SAVEHIST=10000 # Lines stored in history file
 
+## KEY BINDINGS ##
+
+bindkey $'^[[A' up-line-or-search    # Up arrow
+bindkey $'^[[B' down-line-or-search  # Down arrow
+
