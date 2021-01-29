@@ -2,8 +2,8 @@
 # orange 179
 # purple 98, 61
 # blue 33, 27
-PROMPT='%B%K{98}%F{231} %~ %f%k%b
-%B%F{164}%#%f%b%B%F{40}->%f%b '
+PROMPT='%B%F{164}%#%f%b%B%K{98}%F{231} %~ %f%k%b
+%B%F{40}->%f%b '
 
 ## RIGHT SIDE PROMPT ##
 autoload -Uz vcs_info
