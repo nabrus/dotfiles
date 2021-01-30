@@ -12,11 +12,45 @@ My setup for storing and managing these *dotfiles* is following Nicola Paolucci'
 echo ".cfgFiles" >> .gitignore
 ```
 
-*  Now clone *dotfiles* into a **bare** repository in a "dot" folder on your `$HOME`:
+*  Now clone this *dotfiles* repo using the `--bare` flag into a "dot" folder in `$HOME`:
 ```zsh
 git clone --bare https://github.com/nabrus/dotfiles.git $HOME/.cfgFiles
 ```
 
+*  Next, define the alias in the current shell scope:
+```zsh
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfgFiles/ --work-tree=$HOME'
+```
+
+*  Then, set the flag `showUntrackedFiles` to 'no'. Local configuration to ignore all untracked files.
+```zsh
+dotfiles config --local status.showUntrackedFiles no
+```
+
+*  Lastly, run the `checkout` command to restore working tree files::
+```zsh
+dotfiles checkout
+```
+
+You may receive the following error message with this final step:
+```zsh
+error: The following untracked working tree files would be overwritten by checkout:
+    .zshrc
+    .gitignore
+Please move or remove them before you can switch branches.
+Aborting
+```
+
+Back up the files if important then remove them. Finally re-run `dotfiles checkout`.
+
+All finished, use the alias to manage dotfiles with git commands like so:
+```zsh
+dotfiles status
+dotfiles add .eslintrc
+dotfiles commit -m "Add eslintrc"
+dotfiles push
+dotfiles pull
+```
 
 ## Starting From Scratch ##
 
