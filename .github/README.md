@@ -7,12 +7,12 @@ My setup for storing and managing these *dotfiles* is following Nicola Paolucci'
 
 ##  How to install on a new system ## 
 
-*  Prior to installation, to avoid weird recursion issues, make sure the source repository ignores the folder where you'll clone it. Add it to the current global `.gitignore` file:
+*  Prior to installation, to avoid weird recursion issues, make sure the source repository ignores the folder where you'll clone it. Add it to the current global `.gitignore` file on the new machine:
 ```zsh
 echo ".cfgFiles" >> .gitignore
 ```
 
-*  Clone dotfiles into a **bare** repository in a "dot" folder on your `$HOME`:
+*  Now clone *dotfiles* into a **bare** repository in a "dot" folder on your `$HOME`:
 ```zsh
 git clone --bare https://github.com/nabrus/dotfiles.git $HOME/.cfgFiles
 ```
