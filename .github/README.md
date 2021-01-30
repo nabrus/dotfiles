@@ -2,7 +2,7 @@
 
 This repo contains my (`.`) files—configurations, shortcuts, etc.
 
-My setup for storing and managing these *dotfiles* is following Nicola Paolucci's tutorial on Atlassian [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles). See [Starting From Scratch](#starting-from-scratch) below for initial setup of this technique if not already tracking your configuration files. 
+My setup for storing and managing these *dotfiles* is following Nicola Paolucci's tutorial on Atlassian, [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles). See [Starting From Scratch](#starting-from-scratch) below for initial setup of this technique if not already tracking your configuration files. 
 
 
 ##  How to install on a new system ## 
@@ -27,7 +27,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfgFiles/ --work-tree=$HOME'
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-*  Lastly, run the `checkout` command to restore working tree files::
+*  Lastly, run the `checkout` command to restore working tree files:
 ```zsh
 dotfiles checkout
 ```

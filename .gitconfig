@@ -16,7 +16,7 @@
 [core]
 	excludesFile = ~/.gitignore_global
 
-## Local/private config goes in the include ##
+## Local/private config goes in the `include` (user name, email, etc.) ##
 [include]
 	path = ~/.gitconfig_local
 
