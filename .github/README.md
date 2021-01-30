@@ -2,7 +2,27 @@
 
 This repo contains my (`.`) files—configurations, shortcuts, etc.
 
+My setup for storing and managing these *dotfiles* is following Nicola Paolucci's tutorial on Atlassian [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles). See 'Starting From Scratch' below for initial setup of this technique if not already tracking your configuration files. 
+
+
+##  How to install on a new system ## 
+
+*  Prior to installation, to avoid weird recursion issues, make sure the source repository ignores the folder where you'll clone it. Add it to the current global `.gitignore` file:
+```zsh
+echo ".cfgFiles" >> .gitignore
+```
+
+*  Clone dotfiles into a **bare** repository in a "dot" folder on your `$HOME`:
+```zsh
+git clone --bare https://github.com/nabrus/dotfiles.git $HOME/.cfgFiles
+```
+
+
+## Starting From Scratch ##
+
 #### A `--bare` Git repo used for initial setup following these steps: ####
+
+Requires [Git](https://git-scm.com)
 
 *  Initialize a bare git repo:
 ```zsh
