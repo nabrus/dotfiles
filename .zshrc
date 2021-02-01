@@ -37,14 +37,30 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000 # Lines remembered per session
 SAVEHIST=20000 # Lines stored in history file
 
+
 ## KEY BINDINGS ##
 
 bindkey $'^[[A' up-line-or-search    # Up arrow
 bindkey $'^[[B' down-line-or-search  # Down arrow
 
+
 ## COMPLETION ##
+ 
+### The following lines were added by compinstall ###
+
+# Partial completion suggestions
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' list-suffixes true
+
+# List with color
+zstyle ':completion:*' list-colors ''
+
+# Case insensiive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+
+zstyle :compinstall filename '/Users/sju/.zshrc'
 
 # Load completion
-autoload -Uz compinit && compinit 
+autoload -Uz compinit && compinit
 
-
+### End of lines added by compinstall ###
