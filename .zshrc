@@ -35,7 +35,7 @@ for file in $HOME/.zsh/*; source $file
 # Save command history
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000 # Lines remembered per session
-SAVEHIST=10000 # Lines stored in history file
+SAVEHIST=20000 # Lines stored in history file
 
 ## KEY BINDINGS ##
 
