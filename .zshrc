@@ -42,3 +42,9 @@ SAVEHIST=20000 # Lines stored in history file
 bindkey $'^[[A' up-line-or-search    # Up arrow
 bindkey $'^[[B' down-line-or-search  # Down arrow
 
+## COMPLETION ##
+
+# Load completion
+autoload -Uz compinit && compinit 
+
+
