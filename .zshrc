@@ -46,7 +46,7 @@ bindkey $'^[[B' down-line-or-search  # Down arrow
 
 ## COMPLETION ##
  
-### The following lines were added by compinstall ###
+#** The following lines were added by compinstall **#
 
 # Partial completion suggestions
 zstyle ':completion:*' expand prefix suffix
@@ -63,4 +63,20 @@ zstyle :compinstall filename '/Users/sju/.zshrc'
 # Load completion
 autoload -Uz compinit && compinit
 
-### End of lines added by compinstall ###
+#** End of lines added by compinstall **#
+
+
+## EXTENSIONS/PLUG-INS ##
+
+# zsh-autosuggestions #
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+if [[ -r ~/code/shell_projects/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then 
+   source ~/code/shell_projects/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# zsh-syntax-highlighting #
+# **NOTE** load this AT THE END, according to the docs.
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+if [[ -r ~/code/shell_projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+     source ~/code/shell_projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
