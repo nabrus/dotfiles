@@ -1,4 +1,5 @@
-## zshrc - Steve Urban ##
+#****************** zshrc - Steve Urban *****************#
+
 
 ## SHELL OPTIONS ##
 
@@ -45,8 +46,10 @@ bindkey $'^[[B' down-line-or-search  # Down arrow
 
 
 ## COMPLETION ##
- 
-#** The following lines were added by compinstall **#
+
+#------------------------------------------------------# 
+# The following lines were added by compinstall        #
+#------------------------------------------------------#
 
 # Partial completion suggestions
 zstyle ':completion:*' expand prefix suffix
@@ -63,7 +66,9 @@ zstyle :compinstall filename '/Users/sju/.zshrc'
 # Load completion
 autoload -Uz compinit && compinit
 
-#** End of lines added by compinstall **#
+#------------------------------------------------------#
+# End of lines added by compinstall                    #
+#------------------------------------------------------#
 
 
 ## EXTENSIONS/PLUG-INS ##
