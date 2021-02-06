@@ -2,16 +2,25 @@
 	a = add
 	p = push
 	f = fetch
-	m = merge
 	b = branch
-	c = commit -m
-	ac = commit -am
+
+	# Commit
+	c = commit -m              # commit with message
+	ca = commit -am            # commit all with message
+
+	# Remote
+	r = remote -v              # show all remote repos with name
+	d = diff
+	# Log
+	l = log
+	
 	st = status
-	lg = log
-	df = diff
 	co = checkout
 	po = push origin
-	mom = merge origin/master
+
+	# Merge
+	m = merge
+	mom = merge origin/master  # merges origin/master into local branch
 
 [core]
 	excludesFile = ~/.gitignore_global
