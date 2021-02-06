@@ -1,24 +1,24 @@
 [alias]
 	a = add
-	p = push
 	f = fetch
 	b = branch
+	d = diff
+	r = remote -v              # show all remote repos with name
+	st = status
+	co = checkout
 
-	# Commit
+	# Commit #
 	c = commit -m              # commit with message
 	ca = commit -am            # commit all with message
 
-	# Remote
-	r = remote -v              # show all remote repos with name
-	d = diff
-	# Log
+	# Log #
 	l = log
-	
-	st = status
-	co = checkout
+
+	# Push #
+	p = push
 	po = push origin
 
-	# Merge
+	# Merge #
 	m = merge
 	mom = merge origin/master  # merges origin/master into local branch
 
