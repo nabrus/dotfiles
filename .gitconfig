@@ -1,11 +1,14 @@
 [alias]
 	a = add
 	f = fetch
-	b = branch
 	d = diff
-	r = remote -v              # show all remote repos with name
+	r = remote -v              # show all remote repos with name (verbose)
 	st = status
 	co = checkout
+
+	# Branch #
+	b = branch
+	ba = branch --all
 
 	# Commit #
 	c = commit -m              # commit with message
@@ -21,6 +24,8 @@
 	# Merge #
 	m = merge
 	mom = merge origin/master  # merges origin/master into local branch
+
+	# Reset #
 
 [core]
 	excludesFile = ~/.gitignore_global
