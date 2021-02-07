@@ -15,5 +15,5 @@ zstyle ':vcs_info:git:*' formats '%F{240}(%b)%f'
 zstyle ':vcs_info:*' enable git 
 
 ## CORRECTION PROMPT ##
-SPROMPT='-> Correct %B%F{196}%R%f%b to %B%F{green}%r%f%b ?
+SPROMPT='⚠️  Correct %B%F{196}%R%f%b to %B%F{green}%r%f%b ?
 [n=no; y=yes; a=abort; e=edit] '
