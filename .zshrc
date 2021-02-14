@@ -1,4 +1,4 @@
-#****************** zshrc - Steve Urban *****************#
+# >>>>>>>>>>>>>>>>>>>>>>>> zshrc - Steve Urban <<<<<<<<<<<<<<<<<<<<<<<<< #
 
 
 ## SHELL OPTIONS ##
@@ -16,7 +16,6 @@ setopt CORRECT_ALL # Correct spelling on all arguments.
 # Note: Globbing refers to the expansion of wildcard characters.
 setopt EXTENDED_GLOB # Adds use of qualifieres in parentheses at the end.
 setopt NO_CASE_GLOB # Set globbing and tab-completion to be case-insensitive
-
 
 # History #
 setopt EXTENDED_HISTORY # Add timestamps to history `: <beginning time>:<elapsed seconds>;<command>`
