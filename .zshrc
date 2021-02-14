@@ -12,10 +12,11 @@ setopt CORRECT # Spell checker
 
 setopt CORRECT_ALL # Correct spelling on all arguments.
 
-setopt NO_CASE_GLOB # Set globbing and tab-completion to be case-insensitive
+# Globbing #
 # Note: Globbing refers to the expansion of wildcard characters.
+setopt EXTENDED_GLOB # Adds use of qualifieres in parentheses at the end.
+setopt NO_CASE_GLOB # Set globbing and tab-completion to be case-insensitive
 
-setopt KSH_ARRAYS # Sets zero-based index arrays. Unset to have array indices start at 1 (default).
 
 # History #
 setopt EXTENDED_HISTORY # Add timestamps to history `: <beginning time>:<elapsed seconds>;<command>`
