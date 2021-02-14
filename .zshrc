@@ -15,6 +15,8 @@ setopt CORRECT_ALL # Correct spelling on all arguments.
 setopt NO_CASE_GLOB # Set globbing and tab-completion to be case-insensitive
 # Note: Globbing refers to the expansion of wildcard characters.
 
+setopt KSH_ARRAYS # Sets zero-based index arrays. Unset to have array indices start at 1 (default).
+
 # History #
 setopt EXTENDED_HISTORY # Add timestamps to history `: <beginning time>:<elapsed seconds>;<command>`
 setopt SHARE_HISTORY # Share history across multiple zsh sessions
