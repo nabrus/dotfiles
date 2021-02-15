@@ -29,18 +29,18 @@ setopt HIST_VERIFY          # `!!` Shows history expansion before executing
 setopt HIST_SAVE_NO_DUPS    # Omits old commands that duplicate new from hist file  
 
 
-## SOURCE ##
-
-# Load all files in .zsh dir to current shell using a short form `for` loop
-for file in $HOME/.zsh/*; source $file 
-
-
 ## SHELL VARIABLES/PARAMETERS ##
 
 # Save command history
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=10000 # Lines remembered per session
 SAVEHIST=20000 # Lines stored in history file
+
+
+## SOURCE ##
+
+# Load all files in .zsh dir to current shell using a short form `for` loop
+for file in $HOME/.zsh/*; source $file 
 
 
 ## KEY BINDINGS ##
