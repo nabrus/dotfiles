@@ -18,9 +18,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
-    /************************************************
-      Wes Bos auto-save configs
-    ************************************************/
+    /**********Wes Bos auto-save configs************************/
     "editor.formatOnSave": true,
     // turn it off for JS and JSX, we will do this via eslint
     "[javascript]": {
@@ -40,7 +38,5 @@
         "javascript",
         "javascriptreact"
     ],
-    /************************************************
-      End of Wes Bos configs
-    ************************************************/
+    /**********End of Wes Bos configs***************************/
 }
