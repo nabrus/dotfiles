@@ -53,6 +53,21 @@ dotfiles commit -m "Add eslintrc"
 dotfiles push
 dotfiles pull
 ```
+## VS Code Setup ##
+
+After cloning the user settings file will now be in the `.vscode` directory. Be sure to do the following:
+
+*  Remove existing default json file:
+```zsh
+rm ~/Library/Application\ Support/Code/User/settings.json
+```
+
+*  Symlink default path to the files new location:
+```zsh
+ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User
+```
+
+See VS Code README for more editor info.
 
 ## Starting From Scratch ##
 
