@@ -4,13 +4,13 @@
 
 Running VS Code from the terminal by typing the `code` command.
 
-#### Adding to your PATH ####
+#### This functionality needs to be added to your PATH ####
 
 *  In the **Command Palette** (shift+cmd+P), type `shell command` to find the `Shell Command: Install 'code' command in PATH`
 
 *  The new `$PATH` value will take effect with a new terminal session.
 
-Or add to your PATH manually in zsh config:
+**Or** add to your PATH manually in zsh config file:
 
 ```zsh
 # Add Visual Studio Code (code)
