@@ -19,7 +19,7 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 
 Check out [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac) for more info.
 
-## Extensions ##
+## Installed Extensions ##
 
 *  [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl): theme by Sarah Drasner
 *  [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): JavaScript linter by Dirk Baeumer
