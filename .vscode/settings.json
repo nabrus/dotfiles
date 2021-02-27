@@ -1,0 +1,46 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 18,
+    "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.tabSize": 2,
+    "editor.cursorStyle": "block",
+    "editor.cursorWidth": 5, // Only for line style
+    "editor.fontWeight": "400",
+    "editor.fontLigatures": true,
+    "editor.letterSpacing": 0.5,
+    "editor.renderWhitespace": "all",
+    "editor.colorDecorators": false,
+    "editor.wordWrap": "on",
+    "color-highlight.matchWords": true,
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.cursorStyle": "block",
+    "workbench.colorTheme": "Night Owl",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    /************************************************
+      Wes Bos auto-save configs
+    ************************************************/
+    "editor.formatOnSave": true,
+    // turn it off for JS and JSX, we will do this via eslint
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    // show eslint icon at bottom toolbar
+    "eslint.alwaysShowStatus": true,
+    // tell the ESLint plugin to run on save
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact"
+    ],
+    /************************************************
+      End of Wes Bos configs
+    ************************************************/
+}
