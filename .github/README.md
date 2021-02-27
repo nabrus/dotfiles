@@ -55,7 +55,7 @@ dotfiles pull
 ```
 ## VS Code Setup ##
 
-After cloning the user settings file will now be in the `.vscode` directory. Be sure to do the following:
+After cloning this repo, the user settings file will now be in the `.vscode` directory. Be sure to do the following:
 
 *  Remove existing default json file:
 ```zsh
