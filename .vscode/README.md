@@ -6,7 +6,7 @@ Running VS Code from the terminal by typing the `code` command.
 
 #### Adding to your PATH ####
 
-*  In the **Command Palette** (shift+cmd+P), type `shell command` to find the `**Shell Command**: Install 'code' command in PATH`
+*  In the **Command Palette** (shift+cmd+P), type `shell command` to find the `Shell Command: Install 'code' command in PATH`
 
 *  The new `$PATH` value will take effect with a new terminal session.
 
