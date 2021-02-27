@@ -67,7 +67,7 @@ rm ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User
 ```
 
-See VS Code README for more editor info.
+See VS Code [README](https://github.com/nabrus/dotfiles/tree/main/.vscode) for more editor info.
 
 ## Starting From Scratch ##
 
