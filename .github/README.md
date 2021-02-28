@@ -34,7 +34,7 @@ dotfiles config --local status.showUntrackedFiles no
 dotfiles checkout
 ```
 
-You may receive the following error message with this final step:
+You may receive an error message with this final step, for example:
 ```zsh
 error: The following untracked working tree files would be overwritten by checkout:
     .zshrc
