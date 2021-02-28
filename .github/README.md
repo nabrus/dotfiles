@@ -45,7 +45,9 @@ Aborting
 
 Back up the files if important then remove them. Finally re-run `dotfiles checkout`.
 
-All finished, use the alias to manage dotfiles with git commands like so:
+**All finished!** 
+
+Use the alias to manage dotfiles with git commands like so:
 ```zsh
 dotfiles status
 dotfiles add .eslintrc
