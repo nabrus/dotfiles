@@ -34,3 +34,5 @@
 [include]
 	path = ~/.gitconfig_local
 
+[pull]
+	ff = only # fast-forward only
