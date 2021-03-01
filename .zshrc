@@ -65,7 +65,7 @@ zstyle ':completion:*' list-colors ''
 # Case insensiive path-completion
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
-# Enable arrow key menu for completion
+# Enable arrow key menu for completion (added post compinstall)
 zstyle ':completion:*' menu select
 
 zstyle :compinstall filename '/Users/sju/.zshrc'
