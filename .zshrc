@@ -1,5 +1,12 @@
 # >>>>>>>>>>>>>>>>>>>>>>>> zshrc - Steve Urban <<<<<<<<<<<<<<<<<<<<<<<<< #
 
+## ENVIRONMENT VARIABLES ##
+
+# Use ANSI color sequences to distinguish file types
+export CLICOLOR=1
+# Sets which colors to use
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 
 ## SHELL OPTIONS ##
 
