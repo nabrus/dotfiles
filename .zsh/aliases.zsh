@@ -1,6 +1,6 @@
 ## ALIASES ##
 
-# My dotfiles git repo
+# 'dotfiles' git repo shortcut.
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfgFiles/ --work-tree=$HOME'
 # Replaces the regular `git` command to use `dotfiles` instead to
 # interact with the config files repository from any location. 
