@@ -4,8 +4,7 @@ This repo contains my (`.`) files—configurations, shortcuts, etc.
 
 My setup for storing and managing these *dotfiles* is following Nicola Paolucci's tutorial on Atlassian, [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles).
 
-See [Starting From Scratch](#starting-from-scratch) below for initial setup of this technique if not already tracking your configuration files. 
-
+*Note*: For first-time setup instructions of this technique, if not already tracking your configuration files, see [Starting From Scratch](#starting-from-scratch) below.
 
 ##  How to install on a new system ## 
 
