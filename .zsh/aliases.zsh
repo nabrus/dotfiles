@@ -17,4 +17,4 @@ alias g='git'
 alias x='exit'
 
 # Homebrew
-alias brewup='brew update && brew upgrade'
+alias tapkeg='brew update && brew upgrade'
