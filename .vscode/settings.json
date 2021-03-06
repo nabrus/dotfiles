@@ -12,6 +12,10 @@
     "editor.renderWhitespace": "all",
     "editor.colorDecorators": false,
     "editor.wordWrap": "on",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+    },
     "color-highlight.matchWords": true,
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.cursorStyle": "block",
