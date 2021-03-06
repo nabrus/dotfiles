@@ -4,6 +4,7 @@
     "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.tabSize": 2,
     "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "solid",
     "editor.cursorWidth": 5, // Only for line style
     "editor.fontWeight": "400",
     "editor.fontLigatures": true,
