@@ -8,7 +8,7 @@ My setup for storing and managing these *dotfiles* is following Nicola Paolucci'
 
 ##  How to install on a new system ## 
 
-*  Prior to installation, to avoid weird recursion issues, make sure the source repository ignores the folder where you'll clone it. Add it to the current global `.gitignore` file on the new machine:
+*  Prior to installation, to avoid any strange recursion issues, make sure the source repository ignores the folder where you'll clone it. Add it to the current global `.gitignore` file on the new machine:
 ```zsh
 echo ".cfgFiles" >> .gitignore
 ```
