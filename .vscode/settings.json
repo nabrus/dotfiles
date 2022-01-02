@@ -12,6 +12,8 @@
     "editor.renderWhitespace": "all",
     "editor.colorDecorators": false,
     "editor.wordWrap": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
