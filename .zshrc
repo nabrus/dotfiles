@@ -87,6 +87,8 @@ autoload -Uz compinit && compinit
 
 ## EXTENSIONS/PLUG-INS ##
 
+# **NOTE** Remember to to create a `.zsh_plugins` directory for new system setup.
+
 # zsh-autosuggestions #
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
