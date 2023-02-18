@@ -87,7 +87,7 @@ autoload -Uz compinit && compinit
 
 ## EXTENSIONS/PLUG-INS ##
 
-# **NOTE** Remember to to create a `.zsh_plugins` directory for new system setup.
+# **NOTE** Create a `.zsh_plugins` directory for new system setup.
 
 # zsh-autosuggestions #
 
@@ -101,5 +101,5 @@ fi
 # **NOTE** load this AT THE END, according to the docs.
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 if [[ -r ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-     source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+   source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
