@@ -89,6 +89,13 @@ autoload -Uz compinit && compinit
 
 # **NOTE** Create a `.zsh_plugins` directory for new system setup.
 
+# zsh-nvm #
+
+# https://github.com/lukechilds/zsh-nvm
+if [[ -r ~/.zsh_plugins/zsh-nvm/zsh-nvm.plugin.zsh ]]; then 
+   source ~/.zsh_plugins/zsh-nvm/zsh-nvm.plugin.zsh
+fi
+
 # zsh-autosuggestions #
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
