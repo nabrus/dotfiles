@@ -90,7 +90,7 @@ autoload -Uz compinit && compinit
 # **NOTE** Create a `.zsh_plugins` directory for new system setup.
 
 # zsh-nvm #
-# node version manager
+# Node Version Manager
 
 # https://github.com/lukechilds/zsh-nvm
 if [[ -r ~/.zsh_plugins/zsh-nvm/zsh-nvm.plugin.zsh ]]; then 
