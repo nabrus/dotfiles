@@ -14,6 +14,7 @@
     "editor.wordWrap": "on",
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": false,
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
@@ -47,4 +48,5 @@
     "[python]": {
         "editor.formatOnType": true
     },
+    "workbench.activityBar.location": "top",
 }
