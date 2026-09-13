@@ -17,7 +17,8 @@ setopt CORRECT # Spell checker
 # n=no, execute as is; y=yes, correct and execute;
 # a=abort; e=edit, returns to the prompt
 
-setopt CORRECT_ALL # Correct spelling on all arguments.
+# Disabled ALL below to avoid unwanted correction of arguments, paths, and filenames
+# setopt CORRECT_ALL # Correct spelling on all arguments.
 
 # Globbing #
 # Note: Globbing refers to the expansion of wildcard characters.
@@ -40,14 +41,16 @@ setopt HIST_SAVE_NO_DUPS    # Omits old commands that duplicate new from hist fi
 
 # Save command history
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
-HISTSIZE=10000 # Lines remembered per session
-SAVEHIST=20000 # Lines stored in history file
+HISTSIZE=60000 # Maximum events kept in the internal history list
+SAVEHIST=50000 # Maximum events saved to the history file
 
 
 ## SOURCE ##
 
-# Load all files in .zsh dir to current shell using a short form `for` loop
-for file in $HOME/.zsh/*; source $file 
+# Load all files in .zsh dir to current shell using a `for` loop
+for file in "$HOME"/.zsh/*.zsh(N); do
+    source "$file"
+done
 
 
 ## KEY BINDINGS ##
