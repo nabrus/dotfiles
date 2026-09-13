@@ -60,32 +60,23 @@ bindkey $'^[[B' down-line-or-search  # Down arrow
 
 
 ## COMPLETION ##
-
-#------------------------------------------------------# 
-# The following lines were added by compinstall        #
-#------------------------------------------------------#
+# Initially generated with compinstall; maintained manually
 
 # Partial completion suggestions
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' list-suffixes true
 
-# List with color
+# Display completion lists with color
 zstyle ':completion:*' list-colors ''
 
-# Case insensiive path-completion
+# Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
-# Enable completion selection with arrow keys (added post compinstall)
+# Enable completion selection with arrow keys (manual change)
 zstyle ':completion:*' menu select
-
-zstyle :compinstall filename '/Users/sju/.zshrc'
 
 # Load completion
 autoload -Uz compinit && compinit
-
-#------------------------------------------------------#
-# End of lines added by compinstall                    #
-#------------------------------------------------------#
 
 
 ## EXTENSIONS/PLUG-INS ##
