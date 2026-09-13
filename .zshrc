@@ -17,7 +17,7 @@ setopt CORRECT # Spell checker
 # n=no, execute as is; y=yes, correct and execute;
 # a=abort; e=edit, returns to the prompt
 
-# Disabled ALL below to avoid unwanted correction of arguments, paths, and filenames
+# Disabled `CORRECT_ALL` below to avoid unwanted correction of arguments, paths, and filenames
 # setopt CORRECT_ALL # Correct spelling on all arguments.
 
 # Globbing #
@@ -25,7 +25,7 @@ setopt CORRECT # Spell checker
 setopt EXTENDED_GLOB 
 # Expands basic globbing by adding use of qualifiers enclosed in parentheses at the end of filename generation.
 setopt NO_CASE_GLOB 
-# Set globbing and tab-completion to be case-insensitive
+# Make filename globbing case-insensitive
 
 # History #
 setopt EXTENDED_HISTORY     # Add timestamps to history `: <beginning time>:<elapsed seconds>;<command>`
@@ -83,24 +83,14 @@ autoload -Uz compinit && compinit
 
 # **NOTE** Create a `.zsh_plugins` directory for new system setup.
 
-# zsh-nvm #
-# Node Version Manager
-
-# https://github.com/lukechilds/zsh-nvm
-if [[ -r ~/.zsh_plugins/zsh-nvm/zsh-nvm.plugin.zsh ]]; then 
-   source ~/.zsh_plugins/zsh-nvm/zsh-nvm.plugin.zsh
-fi
-
 # zsh-autosuggestions #
-
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 if [[ -r ~/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then 
    source ~/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # zsh-syntax-highlighting #
-
-# **NOTE** load this AT THE END, according to the docs.
+# **NOTE** Load this AT THE END, according to the docs.
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 if [[ -r ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
    source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
