@@ -1,11 +1,9 @@
 ## ALIASES ##
 
-# 'dotfiles' git repo shortcut.
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfgFiles/ --work-tree=$HOME'
-# Replaces the regular `git` command to use `dotfiles` instead to
-# interact with the config files repository from any location. 
-# It also configures the `--bare` repo, setting `$HOME` as the work tree
-# and stores Git state at `.cfgFIles`.
+# 'dotfiles' shortcut for the bare Git repository.
+alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+# Use `dotfiles` in place of `git` when managing tracked dotfiles.
+# Git repository metadata is stored in ~/.dotfiles.git with $HOME as the work tree.
 
 # Shortcuts
 alias ll='ls -lhF'    # (F) puts `/` for directory, `@` for symbolic link, etc.
