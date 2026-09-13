@@ -1,3 +1,6 @@
+# Dotfiles bare Git repository
+.dotfiles.git
+
 # Folder view configuration files
 .DS_Store
 
