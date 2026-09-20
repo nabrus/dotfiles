@@ -6,69 +6,146 @@ My setup for storing and managing these *dotfiles* is following Nicola Paolucci'
 
 *Note*: For first-time setup instructions of this technique, if not already tracking your configuration files, see [Starting From Scratch](#starting-from-scratch) below.
 
-##  How to install on a new system ## 
+## Prerequisites ##
 
-*  Prior to installation, to avoid any strange recursion issues, make sure the source repository ignores the folder where you'll clone it. Add it to the current global `.gitignore` file on the new machine:
+This configuration is designed for an Apple Silicon Mac.
+
+Before installing the dotfiles, make sure the following are installed:
+
+* Apple Command Line Tools (provides Git for the initial setup)
+
 ```zsh
-echo ".cfgFiles" >> .gitignore
+xcode-select --install
 ```
 
-*  Now clone this *dotfiles* repo using the `--bare` flag into a "dot" folder in `$HOME`:
+* [Homebrew](https://brew.sh) installed at `/opt/homebrew`
+
+##  How to install on a new system ##
+
+Before installing, check for any existing dotfiles that may conflict with files tracked by this repository. The checkout step will not overwrite conflicting untracked files; back up or merge any existing configuration you want to keep.
+
+Now clone this *dotfiles* repo using the `--bare` flag into a "dot" folder in `$HOME`:
+
 ```zsh
-git clone --bare https://github.com/nabrus/dotfiles.git $HOME/.cfgFiles
+git clone --bare https://github.com/nabrus/dotfiles.git $HOME/.dotfiles.git
 ```
 
-*  Next, define the alias in the current shell scope:
+Next, define the `dotfiles` alias in the current shell scope:
+
 ```zsh
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfgFiles/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 ```
 
-*  Then, set the flag `showUntrackedFiles` to 'no'. Local configuration to ignore all untracked files.
+Then, set `showUntrackedFiles` to `no`. This local repository configuration hides untracked files from `dotfiles status`:
+
 ```zsh
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-*  Lastly, run the `checkout` command to restore working tree files:
+Next, run `checkout` to restore the tracked dotfiles into `$HOME`:
+
 ```zsh
 dotfiles checkout
 ```
 
-You may receive an error message with this final step, for example:
+You may receive an error if existing files in `$HOME` would be overwritten by the checkout, for example:
+
 ```zsh
 error: The following untracked working tree files would be overwritten by checkout:
     .zshrc
-    .gitignore
+    .gitconfig
 Please move or remove them before you can switch branches.
 Aborting
 ```
 
-Back up the files if important then remove them. Finally re-run `dotfiles checkout`.
+Back up or rename any conflicting files you want to keep, then re-run:
+
+```zsh
+dotfiles checkout
+```
+
+### Local Git Configuration ###
+
+The tracked `.gitconfig` includes `~/.gitconfig.local` for machine-specific Git configuration. This file is intentionally not tracked by the dotfiles repository.
+
+Create `~/.gitconfig.local` and add the appropriate Git identity:
+
+```ini
+[user]
+    name = nabrus
+    email = 34988577+nabrus@users.noreply.github.com
+```
+
+### Zsh Plugins ###
+
+The `~/.zsh_plugins` directory is intentionally not tracked by the dotfiles repository. Create the directory and install the plugins used by `.zshrc`:
+
+```zsh
+mkdir -p ~/.zsh_plugins
+```
+
+Install `zsh-autosuggestions`:
+
+```zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh_plugins/zsh-autosuggestions
+```
+
+Install `zsh-syntax-highlighting`:
+
+```zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh_plugins/zsh-syntax-highlighting
+```
+
+### Verify Shell Environment ###
+
+After restoring the dotfiles and installing the Zsh plugins, open a new Terminal session to load the restored shell configuration.
+
+Verify that Homebrew and the Homebrew-installed Git are being used:
+
+```zsh
+which brew
+which git
+git --version
+```
+
+Expected paths:
+
+```text
+/opt/homebrew/bin/brew
+/opt/homebrew/bin/git
+```
 
 **All finished!** 
 
-Use the alias to manage dotfiles with git commands like so:
+Use the `dotfiles` alias in place of `git` when managing files tracked by the dotfiles repository:
+
 ```zsh
 dotfiles status
-dotfiles add .eslintrc
-dotfiles commit -m "Add eslintrc"
+dotfiles add .zshrc
+dotfiles commit -m "Update zsh configuration"
 dotfiles push
 dotfiles pull
 ```
+
 ## VS Code Setup ##
 
-After cloning this repo, the user settings file will now be in the `.vscode` directory. Be sure to do the following.
+The VS Code user settings file is tracked at `~/.vscode/settings.json`. VS Code normally stores this file under `~/Library/Application Support/Code/User/`, so a symbolic link is used to connect the native VS Code location to the tracked dotfiles version.
 
-*  Remove existing default json file:
+Before creating the symbolic link, check whether a settings file already exists:
+
 ```zsh
-rm ~/Library/Application\ Support/Code/User/settings.json
+ls -la ~/Library/Application\ Support/Code/User/settings.json
 ```
 
-*  Symlink default path to the files new location:
+If an existing `settings.json` is present, back it up or merge any settings you want to keep before continuing.
+
+Create the symbolic link:
+
 ```zsh
-ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User
+ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
 
-See the VS Code [README](https://github.com/nabrus/dotfiles/tree/main/.vscode) for more editor info.
+See the VS Code [README](https://github.com/nabrus/dotfiles/tree/main/.vscode) for more editor information.
 
 ## Starting From Scratch ##
 
@@ -76,19 +153,44 @@ See the VS Code [README](https://github.com/nabrus/dotfiles/tree/main/.vscode) f
 
 Requires [Git](https://git-scm.com)
 
-*  Initialize a bare git repo:
+NOTE: Replace `<.dir_name>` and `<alias_name>` with the desired repository directory and command alias.
+
+* Initialize a bare Git repository:
+
 ```zsh
 git init --bare $HOME/<.dir_name>
 ```
 
-*  Create an alias to use instead of the regular `git` command when interacting with the dotfiles repo. Also sets `$HOME` as the work tree and stores git state at created directory:
+* Create an alias to use instead of the regular `git` command when interacting with the dotfiles repository.This sets `$HOME` as the work tree and stores the Git repository metadata in the chosen directory:
+
 ```zsh
-alias <alias_name>='/usr/bin/git --git-dir=$HOME/<.dir_name>/ --work-tree=$HOME'
+alias <alias_name>='git --git-dir=$HOME/<.dir_name> --work-tree=$HOME'
 ```
 
-*  Hide files not explicitly tracked:
+* Hide untracked files from the repository's `status` output:
+
 ```zsh
 <alias_name> config --local status.showUntrackedFiles no
 ```
 
-*  Add the alias to `.zshrc` or `.bashrc`.
+* Add the alias to your shell configuration.
+
+## Maintenance ##
+
+### Zsh Plugins ###
+
+The plugins in `~/.zsh_plugins` are separate Git repositories and are not updated by the dotfiles repository.
+
+Update `zsh-autosuggestions`:
+
+```zsh
+cd ~/.zsh_plugins/zsh-autosuggestions
+git pull
+```
+
+Update `zsh-syntax-highlighting`:
+
+```zsh
+cd ~/.zsh_plugins/zsh-syntax-highlighting
+git pull
+```
