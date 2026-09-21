@@ -10,43 +10,23 @@
     "editor.fontLigatures": true,
     "editor.letterSpacing": 0.5,
     "editor.renderWhitespace": "all",
-    "editor.colorDecorators": false,
+    "editor.colorDecorators": true,
     "editor.wordWrap": "on",
+    "editor.linkedEditing": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
     },
-    "color-highlight.matchWords": true,
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.cursorStyle": "block",
     "workbench.colorTheme": "Night Owl",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
-    /**********Wes Bos auto-save configs************************/
-    "editor.formatOnSave": true,
-    // turn it off for JS and JSX, we will do this via eslint
-    "[javascript][javascriptreact][typescript][typescriptreact]": {
-        "editor.formatOnSave": false
-    },
-    // tell the ESLint plugin to run on save
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
-    // "prettier.disableLanguages": [
-    //     "javascript",
-    //     "javascriptreact"
-    // ],
-    /**********End of Wes Bos configs***************************/
-    "cSpell.enableFiletypes": [
-        "shellscript"
-    ],
-    "[python]": {
-        "editor.formatOnType": true
-    },
     "workbench.activityBar.location": "top",
 }
