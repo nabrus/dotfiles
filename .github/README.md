@@ -78,23 +78,33 @@ Create `~/.gitconfig.local` and add the appropriate Git identity:
 
 ### Zsh Plugins ###
 
-The `~/.zsh_plugins` directory is intentionally not tracked by the dotfiles repository. Create the directory and install the plugins used by `.zshrc`:
+Third-party Zsh plugins are installed manually in `~/.zsh_plugins` and are not
+tracked by this dotfiles repository.
+
+Plugins are maintained by the [zsh-users](https://github.com/zsh-users) organization:
+
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+Create the plugin directory:
 
 ```zsh
 mkdir -p ~/.zsh_plugins
 ```
 
-Install `zsh-autosuggestions`:
+Clone `zsh-autosuggestions`:
 
 ```zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh_plugins/zsh-autosuggestions
 ```
 
-Install `zsh-syntax-highlighting`:
+Clone `zsh-syntax-highlighting`:
 
 ```zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh_plugins/zsh-syntax-highlighting
 ```
+
+The plugins are sourced by `.zshrc` when their respective plugin files are present.
 
 ### Verify Shell Environment ###
 
