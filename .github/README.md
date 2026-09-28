@@ -42,7 +42,74 @@ Then, set `showUntrackedFiles` to `no`. This local repository configuration hide
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-Next, run `checkout` to restore the tracked dotfiles into `$HOME`:
+### Configure Remote Branch Tracking ###
+
+A bare clone does not automatically create the normal remote-tracking branch
+configuration used by a standard Git clone. Configure the `origin` remote so
+fetched branches are stored under `refs/remotes/origin/`:
+
+```zsh
+dotfiles config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+```
+
+This setting tells Git how branches fetched from `origin` should be represented locally. The value is a `refspec` (reference specification): a mapping between remote references and local references. In this case, branches under `refs/heads/` on the remote are mapped to remote-tracking references under `refs/remotes/origin/` locally. For example:
+
+```text
+refs/heads/main → refs/remotes/origin/main
+```
+
+This creates the normal `origin/main` remote-tracking reference Git uses to keep track of the last fetched state of the remote `main` branch.
+
+Now fetch from `origin` to apply this mapping and create the remote-tracking references:
+
+```zsh
+dotfiles fetch origin
+```
+
+Set `origin/main` as the upstream branch for the local `main` branch:
+
+```zsh
+dotfiles branch --set-upstream-to=origin/main main
+```
+
+This allows Git to compare the local `main` branch with `origin/main` and report
+whether the local branch is ahead, behind, or up to date.
+
+Verify the tracking configuration:
+
+```zsh
+dotfiles branch -vv
+```
+
+A correctly configured branch should show `origin/main` as its upstream:
+
+```text
+* main <commit> [origin/main] <commit message>
+```
+
+If the local branch contains commits that have not been pushed, the relationship
+will also be shown:
+
+```text
+* main <commit> [origin/main: ahead 1] <commit message>
+```
+
+The same relationship can be checked with:
+
+```zsh
+dotfiles status
+```
+
+For example:
+
+```text
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+```
+
+### Restore Tracked Dotfiles ###
+
+Run `checkout` to restore the tracked dotfiles into `$HOME`:
 
 ```zsh
 dotfiles checkout
@@ -171,7 +238,7 @@ NOTE: Replace `<.dir_name>` and `<alias_name>` with the desired repository direc
 git init --bare $HOME/<.dir_name>
 ```
 
-* Create an alias to use instead of the regular `git` command when interacting with the dotfiles repository.This sets `$HOME` as the work tree and stores the Git repository metadata in the chosen directory:
+* Create an alias to use instead of the regular `git` command when interacting with the dotfiles repository. This sets `$HOME` as the work tree and stores the Git repository metadata in the chosen directory:
 
 ```zsh
 alias <alias_name>='git --git-dir=$HOME/<.dir_name> --work-tree=$HOME'
