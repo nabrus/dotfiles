@@ -206,7 +206,7 @@ dotfiles pull
 
 ## VS Code Setup ##
 
-The VS Code user settings file is tracked at `~/.vscode/settings.json`. VS Code normally stores this file under `~/Library/Application Support/Code/User/`, so a symbolic link is used to connect the native VS Code location to the tracked dotfiles version.
+The VS Code user settings file is tracked at `~/.vscode/settings.json`. On macOS, VS Code normally stores this file under `~/Library/Application Support/Code/User/`, so a symbolic link connects the native VS Code location to the tracked dotfiles version.
 
 Before creating the symbolic link, check whether a settings file already exists:
 
@@ -214,12 +214,30 @@ Before creating the symbolic link, check whether a settings file already exists:
 ls -la ~/Library/Application\ Support/Code/User/settings.json
 ```
 
-If an existing `settings.json` is present, back it up or merge any settings you want to keep before continuing.
+If an existing `settings.json` is present, review it and save or merge any settings that should be kept before continuing.
 
-Create the symbolic link:
+Once any existing settings have been preserved, remove the existing file:
+
+```zsh
+rm ~/Library/Application\ Support/Code/User/settings.json
+```
+
+Create a symbolic link from VS Code's user settings location to the tracked dotfiles configuration:
 
 ```zsh
 ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+```
+
+Verify the symbolic link:
+
+```zsh
+ls -l ~/Library/Application\ Support/Code/User/settings.json
+```
+
+The output should show that VS Code's `settings.json` points to the tracked file:
+
+```text
+settings.json -> /Users/<username>/.vscode/settings.json
 ```
 
 See the VS Code [README](https://github.com/nabrus/dotfiles/tree/main/.vscode) for more editor information.
