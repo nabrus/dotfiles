@@ -319,6 +319,16 @@ alias <alias_name>='git --git-dir=$HOME/<.dir_name> --work-tree=$HOME'
 
 ## Maintenance ##
 
+### Dotfiles Repository ###
+
+Before making changes on a system that may be behind the remote repository, fetch
+the latest remote state and check the branch relationship:
+
+```zsh
+dotfiles fetch origin
+dotfiles branch -vv
+```
+
 ### Zsh Plugins ###
 
 The plugins in `~/.zsh_plugins` are separate Git repositories and are not updated by the dotfiles repository.
@@ -326,13 +336,11 @@ The plugins in `~/.zsh_plugins` are separate Git repositories and are not update
 Update `zsh-autosuggestions`:
 
 ```zsh
-cd ~/.zsh_plugins/zsh-autosuggestions
-git pull
+git -C ~/.zsh_plugins/zsh-autosuggestions pull
 ```
 
 Update `zsh-syntax-highlighting`:
 
 ```zsh
-cd ~/.zsh_plugins/zsh-syntax-highlighting
-git pull
+git -C ~/.zsh_plugins/zsh-syntax-highlighting pull
 ```
